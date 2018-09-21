@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Connor Clancy</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href='{% static "css/h.css" %}'>
+</head>
+<body>
+
+
+	<div class="Connor">
+		<div class="connor-header">
+			<span id="name">Connor Clancy</span>
+			<div id="welcome">Welcome to my website</div>
+		</div>
+		<div class="linkedlist">
+			<span>github</span>
+			<span>resume</span>
+			<span>linkedin</span>
+		</div>
+	</div>
+
+
+	<div class="Projects">
+		<span id="ptitle">Projects</span>
+		<div id="quote">Click to find out more</div>
+		<div class="gallery">
+			<div class="gimage">
+				<a href="https://github.com/cwclancy/Shelfie" target="_blank"><img src='{% static "images/shelfie.png" %}'></a>
+				<a href="https://github.com/cwclancy/finstagram" target="_blank"><img src='{% static "images/instagram.png" %}'></a>
+				<a href="https://github.com/cwclancy/twitter" target="_blank"><img src='{% static "images/twitter.png" %}'></a>
+				<a href="https://github.com/cwclancy/catan" target="_blank"><img src='{% static "images/catan.jpg" %}'></a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="Aboutme">
+		<div class="life-header">
+			<span id="ltitle">Life</span>
+			<div id="quote">This will say something profound</div>
+		</div>
+		<div class="collage">
+			<div></div>
+			<div class="cimage">
+				<!--<div class="ctitle">Me</div>-->
+				<img src='{% static "images/avi.jpg" %}'>
+			</div>
+			<div class="cimage">
+				<!--<div class="ctitle">Work</div>-->
+				<img src='{% static "images/work.png" %}'>
+			</div>
+			<div class="cimage">
+				<!--<div class="ctitle">College</div>-->
+				<img src='{% static "images/college.png" %}'>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="Me">
+		<div></div>
+		<div class="me-header">
+			<span id="mtitle">Me</span>
+			<div class="msub">Enjoying every second</div>
+		</div>
+		<div></div>
+
+		<div></div>
+		<span id="mtitle">Some text</span>
+		<div></div>
+	</div>
+
+	<div class="Work">
+		<div></div>
+		<div class="work-header">
+			<span id="wtitle">Work</span>
+			<div id="wsub">Teamwork, Communication, Friendship</div>
+		</div>
+		<div></div>
+	</div>
+
+	<div class="College">
+		<div></div>
+		<div class="college-header">
+			<span id="collegetitle">College</span>
+			<div class="msub">Work hard, Play hard</div>
+		</div>
+		<div></div>
+	</div>
+
+
+	<div class="Footer">
+	</div>
+<!-- how to load images
+	{% load static %}
+	<img src='{% static "images/launch_and_home.gif" %}' alt="my image">
+	<h1>Welcome To Mysite</h1>
+-->
+</body>
+</html>
+
