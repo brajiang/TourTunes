@@ -41,5 +41,23 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>spotify</string>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>com.spotify.iOS-SDK-Quick-Start</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>spotify-ios-quick-start</string>
+                <string>hackcmu-login</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>
