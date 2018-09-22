@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BradleyHand-Bold.ttf">
+            <string>BradleyHandITCTT-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LoveInASnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TyZ-Rd-pJC"/>
+                        <viewControllerLayoutGuide type="bottom" id="03X-da-6SF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pm6-fr-Yvv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Koy-SZ-c3L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap/upload a clear picture of your poem then edit below. Tap outside of the text box once your sweet nothings are complete." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6ma-5u-o2n">
+                                        <rect key="frame" x="26" y="30" width="323" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ZE9-2Z-vve"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D30-HR-s1J">
+                                        <rect key="frame" x="307" y="607" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Hlu-gY-GHc"/>
+                                            <constraint firstAttribute="height" constant="60" id="ICa-N8-17i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                        <state key="normal" image="Envelope.png">
+                                            <color key="titleColor" red="0.58064489149999998" green="0.74652297540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sharePoem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7ED-do-cDh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBZ-eo-d7T">
+                                        <rect key="frame" x="288" y="444.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="Guu-N3-3YH"/>
+                                            <constraint firstAttribute="width" secondItem="lBZ-eo-d7T" secondAttribute="height" multiplier="1:1" id="w3Z-rw-tOZ"/>
+                                        </constraints>
+                                        <state key="normal" image="Swap.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="swapText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DY5-y1-7pc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InM-Rb-jXE">
+                                        <rect key="frame" x="51" y="386.5" width="272" height="40"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Snap/Upload Image">
+                                            <color key="titleColor" red="0.58064489145388021" green="0.74652297537843604" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.50486483895705525" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.67689845469999999" green="0.85872765969999998" blue="0.99221161270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.67689845469999999" green="0.85872765969999998" blue="0.99221161270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6T0-wI-NsH"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Find this..." adjustsFontSizeToFit="NO" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="THZ-rt-8Es">
+                                        <rect key="frame" x="51" y="446.5" width="111" height="30"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldEndOnExit:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="10B-fn-Oue"/>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="xhz-Uc-BOh"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Replace with..." adjustsFontSizeToFit="NO" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="02E-0U-47x">
+                                        <rect key="frame" x="170" y="446.5" width="110.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldEndOnExit:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="iSb-8u-uls"/>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="0XV-rl-Emi"/>
+                                        </connections>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVg-ev-ijX">
+                                        <rect key="frame" x="51" y="110" width="272" height="257"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-n1-Q7b">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50007189419999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="InM-Rb-jXE" firstAttribute="centerX" secondItem="Koy-SZ-c3L" secondAttribute="centerX" id="0S9-tG-U24"/>
+                                    <constraint firstAttribute="bottom" secondItem="LVg-ev-ijX" secondAttribute="bottom" constant="300" id="42G-nA-8hV"/>
+                                    <constraint firstItem="6ma-5u-o2n" firstAttribute="leading" secondItem="Koy-SZ-c3L" secondAttribute="leadingMargin" constant="18" id="7bz-HQ-b4s"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="D30-HR-s1J" secondAttribute="trailing" id="7mF-wK-r7e"/>
+                                    <constraint firstItem="u9K-n1-Q7b" firstAttribute="leading" secondItem="Koy-SZ-c3L" secondAttribute="leading" id="8RY-aR-4YX"/>
+                                    <constraint firstItem="lBZ-eo-d7T" firstAttribute="leading" secondItem="02E-0U-47x" secondAttribute="trailing" constant="8" id="C7T-fd-rdc"/>
+                                    <constraint firstItem="02E-0U-47x" firstAttribute="leading" secondItem="THZ-rt-8Es" secondAttribute="trailing" constant="8" id="GhJ-A6-NmC"/>
+                                    <constraint firstItem="THZ-rt-8Es" firstAttribute="top" secondItem="InM-Rb-jXE" secondAttribute="bottom" constant="20" id="JJw-jr-iGO"/>
+                                    <constraint firstItem="THZ-rt-8Es" firstAttribute="centerY" secondItem="02E-0U-47x" secondAttribute="centerY" id="KE1-8v-iiq"/>
+                                    <constraint firstItem="u9K-n1-Q7b" firstAttribute="top" secondItem="Koy-SZ-c3L" secondAttribute="top" id="OIa-m7-Z8l"/>
+                                    <constraint firstItem="InM-Rb-jXE" firstAttribute="trailing" secondItem="lBZ-eo-d7T" secondAttribute="trailing" id="SJG-So-K8v"/>
+                                    <constraint firstItem="lBZ-eo-d7T" firstAttribute="centerY" secondItem="02E-0U-47x" secondAttribute="centerY" id="VJu-xR-XWT"/>
+                                    <constraint firstItem="6ma-5u-o2n" firstAttribute="top" secondItem="Koy-SZ-c3L" secondAttribute="top" constant="30" id="Zxe-EI-NOd"/>
+                                    <constraint firstItem="6ma-5u-o2n" firstAttribute="centerX" secondItem="Koy-SZ-c3L" secondAttribute="centerX" id="cIl-ev-0vu"/>
+                                    <constraint firstItem="THZ-rt-8Es" firstAttribute="leading" secondItem="LVg-ev-ijX" secondAttribute="leading" id="dHe-wu-FIW"/>
+                                    <constraint firstAttribute="trailing" secondItem="u9K-n1-Q7b" secondAttribute="trailing" id="dg8-xU-j9r"/>
+                                    <constraint firstItem="LVg-ev-ijX" firstAttribute="centerX" secondItem="Koy-SZ-c3L" secondAttribute="centerX" id="ir8-BM-CJU"/>
+                                    <constraint firstItem="LVg-ev-ijX" firstAttribute="top" secondItem="6ma-5u-o2n" secondAttribute="bottom" constant="20" id="lBE-6a-zGk"/>
+                                    <constraint firstItem="LVg-ev-ijX" firstAttribute="width" secondItem="InM-Rb-jXE" secondAttribute="width" id="lYF-je-hfO"/>
+                                    <constraint firstItem="InM-Rb-jXE" firstAttribute="top" secondItem="LVg-ev-ijX" secondAttribute="bottom" constant="20" id="rJP-KH-iny"/>
+                                    <constraint firstItem="LVg-ev-ijX" firstAttribute="leading" secondItem="6ma-5u-o2n" secondAttribute="leading" constant="25" id="rZo-g1-w7j"/>
+                                    <constraint firstAttribute="bottom" secondItem="D30-HR-s1J" secondAttribute="bottom" id="sT2-GN-LED"/>
+                                    <constraint firstItem="THZ-rt-8Es" firstAttribute="width" secondItem="02E-0U-47x" secondAttribute="width" id="sbZ-kY-Wye"/>
+                                    <constraint firstAttribute="bottom" secondItem="u9K-n1-Q7b" secondAttribute="bottom" id="w2z-Jz-1un"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60527584876543206" green="0.13480179398148148" blue="0.23355516975308643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Koy-SZ-c3L" firstAttribute="height" secondItem="Pm6-fr-Yvv" secondAttribute="height" id="BDp-RW-rhz"/>
+                            <constraint firstAttribute="trailing" secondItem="Koy-SZ-c3L" secondAttribute="trailing" id="Bqg-sI-2Wo"/>
+                            <constraint firstItem="Koy-SZ-c3L" firstAttribute="leading" secondItem="Pm6-fr-Yvv" secondAttribute="leading" id="htm-HW-1XU"/>
+                            <constraint firstItem="Koy-SZ-c3L" firstAttribute="top" secondItem="Pm6-fr-Yvv" secondAttribute="top" id="kt0-vT-bL0"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="esh-KD-fwU" appends="YES" id="eQd-lc-ej3"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="u9K-n1-Q7b" id="T6q-Q6-390"/>
+                        <outlet property="findTextField" destination="THZ-rt-8Es" id="BaA-kh-Id3"/>
+                        <outlet property="replaceTextField" destination="02E-0U-47x" id="pX8-PP-9nE"/>
+                        <outlet property="textView" destination="LVg-ev-ijX" id="hkC-pT-NGf"/>
+                        <outlet property="topMarginConstraint" destination="kt0-vT-bL0" id="40E-5d-aEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="esh-KD-fwU">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="vXZ-lx-hvc" id="K7I-eS-Nru"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="111.5" y="280.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Envelope.png" width="432" height="373"/>
+        <image name="Swap.png" width="800" height="800"/>
+    </resources>
+</document>
