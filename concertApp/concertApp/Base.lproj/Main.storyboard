@@ -68,29 +68,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mF5-eG-YhU">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mF5-eG-YhU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taylorswift" translatesAutoresizingMaskIntoConstraints="NO" id="4IL-rL-2o1">
-                                        <rect key="frame" x="0.0" y="60" width="380" height="484"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="484" id="LUi-r2-2LI"/>
-                                            <constraint firstAttribute="width" constant="380" id="Vxc-ms-5RY"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ws-Sm-edu">
                                         <rect key="frame" x="116" y="552" width="143" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Get Playlist">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getPlaylistPressed:" destination="KCD-1f-oR0" eventType="touchUpInside" id="qiF-Gy-gJh"/>
+                                        </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="taylorswift" translatesAutoresizingMaskIntoConstraints="NO" id="4IL-rL-2o1">
+                                        <rect key="frame" x="0.0" y="60" width="380" height="484"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="4IL-rL-2o1" firstAttribute="top" secondItem="mF5-eG-YhU" secondAttribute="top" constant="60" id="K7D-kK-iSY"/>
-                                    <constraint firstItem="4IL-rL-2o1" firstAttribute="leading" secondItem="mF5-eG-YhU" secondAttribute="leading" id="goN-pM-LoC"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,6 +96,8 @@
                     <navigationItem key="navigationItem" id="QoR-cH-nRz"/>
                     <connections>
                         <outlet property="previewView" destination="mF5-eG-YhU" id="rvQ-2q-eeh"/>
+                        <outlet property="uploadedImageView" destination="4IL-rL-2o1" id="v1d-d1-7GB"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="uploadToPlaylist" id="1hg-eV-Nk9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr3-dE-UcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,6 +142,9 @@
                                                     <rect key="frame" x="308" y="27" width="21" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="play"/>
+                                                    <connections>
+                                                        <action selector="playPressed:" destination="yKj-GZ-gbj" eventType="touchUpInside" id="RPX-h7-dE8"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Taylor Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bck-BG-2RD">
                                                     <rect key="frame" x="86" y="45" width="78" height="18"/>
@@ -264,4 +266,7 @@
         <image name="playlist" width="24" height="24"/>
         <image name="taylorswift" width="998" height="1174"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1hg-eV-Nk9"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -28,4 +28,9 @@
     self.artistLabel.text = song.songArtist;
     [self.albumImageView setImageWithURL:[NSURL URLWithString:song.songAlbumArt]];
 }
+
+
+- (IBAction)playPressed:(id)sender {
+    NSLog(@"play pressed");
+}
 @end

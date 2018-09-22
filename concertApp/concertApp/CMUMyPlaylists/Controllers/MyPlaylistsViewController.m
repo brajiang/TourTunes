@@ -8,13 +8,12 @@
 
 #import "MyPlaylistsViewController.h"
 #import "SpotifyDataManager.h"
-#import "SpotifySong.h"
 #import "SongCell.h"
 
 @interface MyPlaylistsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property NSMutableArray<SpotifySong *> *songs;
+
 
 @end
 
