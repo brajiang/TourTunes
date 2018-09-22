@@ -56,6 +56,7 @@ def parse_content(content):
             index += 1
     return songs
 
+
 def extract_songs(page):
     doc = BeautifulSoup(page, 'html.parser')
     scripts = doc.find_all('script')
@@ -93,8 +94,10 @@ def is_page_link(tag):
     if tag.get('href') == None:
         return False
     link = tag['href']
-    if link.find('https://www.setlist.fm/setlists') == -1:
+    if link.find('https://www.setlist.fm') == -1:
         return False
+    # if link[:len('https://www.setlist.fm/')] != 'https://www.setlist.fm/':
+    #    return False
     return True
 
 def scrape_html(tour_name):
@@ -105,23 +108,32 @@ def scrape_html(tour_name):
     g_search_url = 'https://www.google.com/search?q={}+%3Asetlist.fm'.format(query)
     # read in entire query page html file
     # webcontent = BeautifulSoup(requests.get(start_url).content, 'html.parser')
+    # print(requests.get(g_search_url).content)
     results_page = BeautifulSoup(requests.get(g_search_url).content, 'html.parser')
-    search_results = results.find_all(is_page_link)
+    search_results = results_page.find_all(is_page_link)
     for res in search_results:
+        # print(res)
         link = res['href']
-        webcontent = BeautifulSoup(requests.get(link))
+        start_idx = link.find('https://')
+        end_idx = link.find('.html') + 5
+        link = ''.join(list(link)[start_idx:end_idx])
+        #print(link)
+        
+        webcontent = BeautifulSoup(requests.get(link).content, 'html.parser')
         setlists = webcontent.find_all(possible_setlist)
         for tag in setlists:
-            # get link from each
-            link = tag['href']
-            url = 'https://www.setlist.fm/{}'.format(link)
-            #print(url)
+            # get link from each and process
+            nlink = tag['href']
+            start = nlink.find('setlist')
+            nlink = ''.join(list(nlink)[start:])
+            url = 'https://www.setlist.fm/{}'.format(nlink)
+            # print('playlist url:' + url)
             content = requests.get(url).content
             songs = extract_songs(content)
-            #print(songs)
+            # print(songs)
             if songs != None and len(songs) > 5:
                 return songs
     return None
 
-scrape_html('taylor swift')
-#print(scrape_html('katy perry'))
+#print(scrape_html('taylor swift'))
+# print(scrape_html('katy perry'))
