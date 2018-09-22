@@ -104,6 +104,7 @@
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             NSLog(@"Do some work");
             [self performSegueWithIdentifier:@"uploadToPlaylist" sender:nil];
+            [activityView stopAnimating];
         });
     }];
 }
