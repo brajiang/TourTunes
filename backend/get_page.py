@@ -6,6 +6,8 @@ the tour, and gets songs of most relevant tour.
 from bs4 import BeautifulSoup
 import requests
 
+
+
 def parse_content(content):
     # outputs list all song, artist pairs
     songs = []
@@ -87,6 +89,7 @@ def scrape_html(tour_name):
     # start with results of setlist.fm search
     query = tour_name.replace(' ', '+')
     start_url = 'https://www.setlist.fm/search?query={}'.format(query)
+    # start with results of google search of setlist.fm, go to first link...?
 
     # read in entire query page html file
     webcontent = BeautifulSoup(requests.get(start_url).content, 'html.parser')
@@ -104,7 +107,6 @@ def scrape_html(tour_name):
         #print(songs)
         if songs != None and len(songs) > 5:
             return songs
-        # if len(songs) > 0:
-           #  return songs
+    return None
 
-scrape_html('katy perry')
+# scrape_html('katy perry')
