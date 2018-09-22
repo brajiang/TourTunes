@@ -33,7 +33,7 @@ def decode_predictions(scores, geometry):
         for x in range(0, numCols):
             # if our score does not have sufficient probability,
             # ignore it
-            if scoresData[x] < 0.5:
+            if scoresData[x] < 0.05:
                 continue
 
             # compute the offset factor as our resulting feature
@@ -69,6 +69,7 @@ def decode_predictions(scores, geometry):
 def analyzeImage(inputFile, pad):
 
     image = cv2.imread(inputFile)
+    cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     orig = image.copy()
     (origH, origW) = image.shape[:2]
 
@@ -172,6 +173,6 @@ def analyzeImage(inputFile, pad):
     return (sortPosition, sortHeight)
 
 
-(sortByPos, sortByHeight) = analyzeImage("images/tswift.png", 0.05)
+(sortByPos, sortByHeight) = analyzeImage("images/reputation.jpg", 0.05)
 print(sortByPos, "\n")
 print(sortByHeight)
