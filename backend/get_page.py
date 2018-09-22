@@ -98,10 +98,10 @@ def scrape_html(tour_name):
         # get link from each
         link = tag['href']
         url = 'https://www.setlist.fm/{}'.format(link)
-        print(url)
+        #print(url)
         content = requests.get(url).content
         songs = extract_songs(content)
-        print(songs)
+        #print(songs)
         if songs != None and len(songs) > 5:
             return songs
         # if len(songs) > 0:

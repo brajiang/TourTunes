@@ -5,6 +5,7 @@ import spotipy.util as util
 import os
 from spotipy import oauth2
 import json
+import get_page
 
 def prompt_for_user_token(username, scope=None, client_id = None,
         client_secret = None, redirect_uri = None, cache_path = None):
@@ -118,4 +119,6 @@ def getPlaylistURL(tourName, songsList):
         trackList.append(sid)
     sp.user_playlist_add_tracks(uid, pid, trackList)
 
-getPlaylistURL("testcrap", [("Bad Romance", "Lady Gaga")])
+songList = get_page.scrape_html("katy perry")
+print("songlist is: ", songList)
+getPlaylistURL("testcrap", songList)
