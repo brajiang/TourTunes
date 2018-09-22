@@ -22,6 +22,15 @@
 		CE0FCEF021566C7D00A055AC /* NearMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEEF21566C7D00A055AC /* NearMeViewController.m */; };
 		CE0FCEF721566CB100A055AC /* MyPlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEF621566CB100A055AC /* MyPlaylistsViewController.m */; };
 		CE0FCEFA21566F2F00A055AC /* PosterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEF921566F2F00A055AC /* PosterCell.m */; };
+		CE0FCF0021567C1500A055AC /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0FCEFD21567C1400A055AC /* SpotifyMetadata.framework */; };
+		CE0FCF0121567C1500A055AC /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0FCEFE21567C1500A055AC /* SpotifyAuthentication.framework */; };
+		CE0FCF0221567C1500A055AC /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0FCEFF21567C1500A055AC /* SpotifyAudioPlayback.framework */; };
+		CE0FCF0621567CBB00A055AC /* SpotifySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCF0521567CBB00A055AC /* SpotifySingleton.m */; };
+		CE0FCF0921567CD100A055AC /* BackendAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCF0821567CD100A055AC /* BackendAPIManager.m */; };
+		CE0FCF0C21567CE000A055AC /* SpotifyDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCF0B21567CE000A055AC /* SpotifyDataManager.m */; };
+		CE0FCF1021568AF600A055AC /* SpotifySong.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCF0F21568AF600A055AC /* SpotifySong.m */; };
+		CE0FCF1321569B7300A055AC /* SongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCF1221569B7300A055AC /* SongCell.m */; };
+		CE0FCF152156A11B00A055AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0FCF142156A11B00A055AC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +80,20 @@
 		CE0FCEF621566CB100A055AC /* MyPlaylistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPlaylistsViewController.m; sourceTree = "<group>"; };
 		CE0FCEF821566F2F00A055AC /* PosterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterCell.h; sourceTree = "<group>"; };
 		CE0FCEF921566F2F00A055AC /* PosterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterCell.m; sourceTree = "<group>"; };
+		CE0FCEFD21567C1400A055AC /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		CE0FCEFE21567C1500A055AC /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		CE0FCEFF21567C1500A055AC /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		CE0FCF0421567CBB00A055AC /* SpotifySingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifySingleton.h; sourceTree = "<group>"; };
+		CE0FCF0521567CBB00A055AC /* SpotifySingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifySingleton.m; sourceTree = "<group>"; };
+		CE0FCF0721567CD100A055AC /* BackendAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackendAPIManager.h; sourceTree = "<group>"; };
+		CE0FCF0821567CD100A055AC /* BackendAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackendAPIManager.m; sourceTree = "<group>"; };
+		CE0FCF0A21567CE000A055AC /* SpotifyDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyDataManager.h; sourceTree = "<group>"; };
+		CE0FCF0B21567CE000A055AC /* SpotifyDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyDataManager.m; sourceTree = "<group>"; };
+		CE0FCF0E21568AF600A055AC /* SpotifySong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifySong.h; sourceTree = "<group>"; };
+		CE0FCF0F21568AF600A055AC /* SpotifySong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifySong.m; sourceTree = "<group>"; };
+		CE0FCF1121569B7300A055AC /* SongCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongCell.h; sourceTree = "<group>"; };
+		CE0FCF1221569B7300A055AC /* SongCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongCell.m; sourceTree = "<group>"; };
+		CE0FCF142156A11B00A055AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D88EC17D3D648579B7D214F8 /* libPods-concertApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-concertApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B087066A8B96A1875A5DC8 /* Pods-concertAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-concertAppTests/Pods-concertAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAB23891AA5DFA8DCF913162 /* Pods-concertAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-concertAppTests/Pods-concertAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0FCF0021567C1500A055AC /* SpotifyMetadata.framework in Frameworks */,
+				CE0FCF0221567C1500A055AC /* SpotifyAudioPlayback.framework in Frameworks */,
+				CE0FCF0121567C1500A055AC /* SpotifyAuthentication.framework in Frameworks */,
 				374A83F9EA658D8C7C1811B3 /* libPods-concertApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +134,9 @@
 		910BD4F5345B65F047F928F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FCEFF21567C1500A055AC /* SpotifyAudioPlayback.framework */,
+				CE0FCEFE21567C1500A055AC /* SpotifyAuthentication.framework */,
+				CE0FCEFD21567C1400A055AC /* SpotifyMetadata.framework */,
 				D88EC17D3D648579B7D214F8 /* libPods-concertApp.a */,
 				8C30C4CF6CF7F473B2039A0A /* libPods-concertAppTests.a */,
 				BF66AEA557AAC5CA03F7F412 /* libPods-concertAppUITests.a */,
@@ -153,6 +182,8 @@
 		CE0FCEB22155EA5A00A055AC /* concertApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FCF0D21568AE700A055AC /* Models */,
+				CE0FCF0321567C9600A055AC /* Util */,
 				CE0FCEF121566C8800A055AC /* CMUMyPlaylists */,
 				CE0FCEEA21566BED00A055AC /* CMUNearMe */,
 				CE0FCEE52155F25900A055AC /* CMUImageUpload */,
@@ -164,6 +195,7 @@
 				CE0FCEBC2155EA5A00A055AC /* Assets.xcassets */,
 				CE0FCEBE2155EA5A00A055AC /* LaunchScreen.storyboard */,
 				CE0FCEC12155EA5A00A055AC /* Info.plist */,
+				CE0FCF142156A11B00A055AC /* GoogleService-Info.plist */,
 				CE0FCEC22155EA5A00A055AC /* main.m */,
 			);
 			path = concertApp;
@@ -259,6 +291,8 @@
 		CE0FCEF321566C9B00A055AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FCF1121569B7300A055AC /* SongCell.h */,
+				CE0FCF1221569B7300A055AC /* SongCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +304,28 @@
 				CE0FCEF621566CB100A055AC /* MyPlaylistsViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE0FCF0321567C9600A055AC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCF0421567CBB00A055AC /* SpotifySingleton.h */,
+				CE0FCF0521567CBB00A055AC /* SpotifySingleton.m */,
+				CE0FCF0721567CD100A055AC /* BackendAPIManager.h */,
+				CE0FCF0821567CD100A055AC /* BackendAPIManager.m */,
+				CE0FCF0A21567CE000A055AC /* SpotifyDataManager.h */,
+				CE0FCF0B21567CE000A055AC /* SpotifyDataManager.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CE0FCF0D21568AE700A055AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCF0E21568AF600A055AC /* SpotifySong.h */,
+				CE0FCF0F21568AF600A055AC /* SpotifySong.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0FCEC02155EA5A00A055AC /* LaunchScreen.storyboard in Resources */,
+				CE0FCF152156A11B00A055AC /* GoogleService-Info.plist in Resources */,
 				CE0FCEBD2155EA5A00A055AC /* Assets.xcassets in Resources */,
 				CE0FCEBB2155EA5A00A055AC /* Main.storyboard in Resources */,
 			);
@@ -476,10 +533,15 @@
 			files = (
 				CE0FCEF721566CB100A055AC /* MyPlaylistsViewController.m in Sources */,
 				CE0FCEFA21566F2F00A055AC /* PosterCell.m in Sources */,
+				CE0FCF0C21567CE000A055AC /* SpotifyDataManager.m in Sources */,
 				CE0FCEB82155EA5A00A055AC /* ViewController.m in Sources */,
+				CE0FCF0921567CD100A055AC /* BackendAPIManager.m in Sources */,
+				CE0FCF1021568AF600A055AC /* SpotifySong.m in Sources */,
 				CE0FCEE92155F28800A055AC /* UploadViewController.m in Sources */,
 				CE0FCEC32155EA5A00A055AC /* main.m in Sources */,
+				CE0FCF1321569B7300A055AC /* SongCell.m in Sources */,
 				CE0FCEB52155EA5A00A055AC /* AppDelegate.m in Sources */,
+				CE0FCF0621567CBB00A055AC /* SpotifySingleton.m in Sources */,
 				CE0FCEF021566C7D00A055AC /* NearMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +716,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = concertApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,6 +738,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = concertApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

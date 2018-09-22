@@ -7,8 +7,12 @@
 //
 
 #import "MyPlaylistsViewController.h"
+#import "SpotifyDataManager.h"
+#import "SpotifySong.h"
 
 @interface MyPlaylistsViewController ()
+
+@property NSMutableArray<SpotifySong *> *songs;
 
 @end
 
@@ -18,6 +22,12 @@
     [super viewDidLoad];
     self.title = @"My Playlists";
     // Do any additional setup after loading the view.
+    [SpotifyDataManager getPlaylistWithId:@"5TotXALQTIJ5nUQ5YlAFCr" Completion:^(NSDictionary * _Nonnull response) {
+        NSArray *temporary = [[NSArray alloc] init];
+        temporary = response[@"tracks"][@"items"];
+        self.songs = [[SpotifySong songsWithArray:temporary] mutableCopy];
+        NSLog(@"%@", self.songs);
+    }];
 }
 
 /*

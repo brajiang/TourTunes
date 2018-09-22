@@ -8,10 +8,14 @@
 
 #import "NearMeViewController.h"
 #import "PosterCell.h"
+#import "BackendAPIManager.h"
+#import "SpotifyDataManager.h"
+#import "SpotifySong.h"
 
 @interface NearMeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic, strong) UIView *titleView;
+@property NSMutableArray<SpotifySong *> *songs;
 
 @end
 
@@ -23,6 +27,8 @@
     self.title = @"Concerts Near Me";
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    // test fetch playlist
 }
 
 

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UNIRest.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 

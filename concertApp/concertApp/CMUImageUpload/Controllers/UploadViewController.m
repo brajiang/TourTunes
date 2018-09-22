@@ -40,6 +40,10 @@
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
     //TODO: Send Edited image to Rohit Here!
+    NSString *baseURL = @"http://192.168.0.13:56001";
+    UNIHTTPJsonResponse *response = [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
+        [simpleRequest setUrl:baseURL];
+    }] asJsonAsync:<#^(UNIHTTPJsonResponse *jsonResponse, NSError *error)response#>]
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
