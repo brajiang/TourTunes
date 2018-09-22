@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+
+body {
+  background-color:#F5F5F5;
+  font-family:'San Francisco';
+  margin:0;
+  padding:0;
+}
+
+
+/* PROJECTS */
+
+.Projects {
+	text-align: center;
+	color: #111111;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+#ptitle {
+	font-size: 55px;
+	font-weight: 900;
+	padding-bottom: 2em;
+}
+
+.gallery {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+/* CONNOR CLANCY */
+
+.Connor {
+	background-color: #FAFAFA;
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	color: #111111;
+	text-align: center;
+	align-items: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+#name {
+	font-size: 55px;
+	font-weight: 900;
+}
+
+#welcome {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.linkedlist {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.linkedlist > span {
+	padding-top: 3em;
+	padding-right: 3em;
+	padding-left: 3em;
+}
+
+/* NAVIGATION */
+
+.Aboutme {
+	background-color: #F9F0EB;
+	color: #1A1A1A;
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	padding-bottom: 4em;
+	padding-top: 2em;
+}
+
+.life-header {
+	padding-bottom: 1em;
+}
+
+#ltitle {
+	font-size: 55px;
+	font-weight: 900;
+}
+
+#quote {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+
+.collage {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 2em;
+}
+
+.cimage > img {
+  width: 350px;
+  height: 350px;
+}
+
+.ctitle {
+	font-size: 40px;
+	font-weight: 900;
+	padding-bottom: .5em;
+}
+
+
+/* ME */
+
+.Me {
+	background-color: #FAFAFA;
+	color: #1A1A1A;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	width: 100%;
+	text-align: left;
+	align-items: flex-start;
+	padding-bottom: 4em;
+	padding-top: 2em;
+}
+
+.me-header {
+	padding-bottom: 2em;
+}
+
+#mtitle {
+	font-size: 55px;
+	font-weight: 900;
+}
+
+.msub {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+/* WORK */
+
+.Work {
+	background-color: #FAFAFA;
+	color: #1A1A1A;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	width: 100%;
+	text-align: left;
+	align-items: flex-start;
+	padding-bottom: 4em;
+	padding-top: 2em;
+}
+
+.work-header {
+	padding-bottom: 2em;
+}
+
+#wtitle {
+	font-size: 55px;
+	font-weight: 900;
+}
+
+#wsub {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+/* COLLEGE */
+
+.College {
+	background-color: #FAFAFA;
+	color: #1A1A1A;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	width: 100%;
+	text-align: left;
+	align-items: flex-start;
+	padding-bottom: 4em;
+	padding-top: 2em;
+}
+
+.college-header {
+	padding-bottom: 2em;
+}
+
+#collegetitle {
+	font-size: 55px;
+	font-weight: 900;
+}
+
+#collegesub {
+	font-size: 20px;
+}
+
+
+
