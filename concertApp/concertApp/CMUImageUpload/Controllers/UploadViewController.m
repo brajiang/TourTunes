@@ -23,6 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Create New Playlist";
+}
+
+- (IBAction)uploadButtonPressed:(id)sender {
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
@@ -30,6 +34,18 @@
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
+    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    
+    //TODO: Send Edited image to Rohit Here!
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 
 /*
 #pragma mark - Navigation

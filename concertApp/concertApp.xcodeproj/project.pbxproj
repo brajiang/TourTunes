@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153FD47E00B7BBBAEE8E7EC5 /* libPods-concertAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF66AEA557AAC5CA03F7F412 /* libPods-concertAppUITests.a */; };
+		374A83F9EA658D8C7C1811B3 /* libPods-concertApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88EC17D3D648579B7D214F8 /* libPods-concertApp.a */; };
+		83B90AE2B98FEE9BE2D3C3EA /* libPods-concertAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30C4CF6CF7F473B2039A0A /* libPods-concertAppTests.a */; };
 		CE0FCEB52155EA5A00A055AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEB42155EA5A00A055AC /* AppDelegate.m */; };
 		CE0FCEB82155EA5A00A055AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEB72155EA5A00A055AC /* ViewController.m */; };
 		CE0FCEBB2155EA5A00A055AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0FCEB92155EA5A00A055AC /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 		CE0FCECD2155EA5A00A055AC /* concertAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCECC2155EA5A00A055AC /* concertAppTests.m */; };
 		CE0FCED82155EA5A00A055AC /* concertAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCED72155EA5A00A055AC /* concertAppUITests.m */; };
 		CE0FCEE92155F28800A055AC /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEE82155F28800A055AC /* UploadViewController.m */; };
+		CE0FCEF021566C7D00A055AC /* NearMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEEF21566C7D00A055AC /* NearMeViewController.m */; };
+		CE0FCEF721566CB100A055AC /* MyPlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEF621566CB100A055AC /* MyPlaylistsViewController.m */; };
+		CE0FCEFA21566F2F00A055AC /* PosterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FCEF921566F2F00A055AC /* PosterCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15EBB2BE5E2AC67AB404CC7B /* Pods-concertAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-concertAppUITests/Pods-concertAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		40769EF0FD0AA9C3985B4A82 /* Pods-concertApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-concertApp/Pods-concertApp.release.xcconfig"; sourceTree = "<group>"; };
+		86A65629526EB7CA895BEF93 /* Pods-concertAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-concertAppUITests/Pods-concertAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8C30C4CF6CF7F473B2039A0A /* libPods-concertAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-concertAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF66AEA557AAC5CA03F7F412 /* libPods-concertAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-concertAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FCEB02155EA5A00A055AC /* concertApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = concertApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0FCEB32155EA5A00A055AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE0FCEB42155EA5A00A055AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +65,16 @@
 		CE0FCED92155EA5A00A055AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0FCEE72155F28800A055AC /* UploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
 		CE0FCEE82155F28800A055AC /* UploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		CE0FCEEE21566C7D00A055AC /* NearMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearMeViewController.h; sourceTree = "<group>"; };
+		CE0FCEEF21566C7D00A055AC /* NearMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearMeViewController.m; sourceTree = "<group>"; };
+		CE0FCEF521566CB100A055AC /* MyPlaylistsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPlaylistsViewController.h; sourceTree = "<group>"; };
+		CE0FCEF621566CB100A055AC /* MyPlaylistsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPlaylistsViewController.m; sourceTree = "<group>"; };
+		CE0FCEF821566F2F00A055AC /* PosterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterCell.h; sourceTree = "<group>"; };
+		CE0FCEF921566F2F00A055AC /* PosterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterCell.m; sourceTree = "<group>"; };
+		D88EC17D3D648579B7D214F8 /* libPods-concertApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-concertApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B087066A8B96A1875A5DC8 /* Pods-concertAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-concertAppTests/Pods-concertAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FAB23891AA5DFA8DCF913162 /* Pods-concertAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-concertAppTests/Pods-concertAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC11F4E63CF507808EE219E7 /* Pods-concertApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-concertApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-concertApp/Pods-concertApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374A83F9EA658D8C7C1811B3 /* libPods-concertApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B90AE2B98FEE9BE2D3C3EA /* libPods-concertAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153FD47E00B7BBBAEE8E7EC5 /* libPods-concertAppUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		910BD4F5345B65F047F928F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D88EC17D3D648579B7D214F8 /* libPods-concertApp.a */,
+				8C30C4CF6CF7F473B2039A0A /* libPods-concertAppTests.a */,
+				BF66AEA557AAC5CA03F7F412 /* libPods-concertAppUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DAF35B0BC19A45709A904CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC11F4E63CF507808EE219E7 /* Pods-concertApp.debug.xcconfig */,
+				40769EF0FD0AA9C3985B4A82 /* Pods-concertApp.release.xcconfig */,
+				E6B087066A8B96A1875A5DC8 /* Pods-concertAppTests.debug.xcconfig */,
+				FAB23891AA5DFA8DCF913162 /* Pods-concertAppTests.release.xcconfig */,
+				15EBB2BE5E2AC67AB404CC7B /* Pods-concertAppUITests.debug.xcconfig */,
+				86A65629526EB7CA895BEF93 /* Pods-concertAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE0FCEA72155EA5A00A055AC = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +135,8 @@
 				CE0FCECB2155EA5A00A055AC /* concertAppTests */,
 				CE0FCED62155EA5A00A055AC /* concertAppUITests */,
 				CE0FCEB12155EA5A00A055AC /* Products */,
+				9DAF35B0BC19A45709A904CA /* Pods */,
+				910BD4F5345B65F047F928F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +153,8 @@
 		CE0FCEB22155EA5A00A055AC /* concertApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE0FCEF121566C8800A055AC /* CMUMyPlaylists */,
+				CE0FCEEA21566BED00A055AC /* CMUNearMe */,
 				CE0FCEE52155F25900A055AC /* CMUImageUpload */,
 				CE0FCEB32155EA5A00A055AC /* AppDelegate.h */,
 				CE0FCEB42155EA5A00A055AC /* AppDelegate.m */,
@@ -153,6 +204,74 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		CE0FCEEA21566BED00A055AC /* CMUNearMe */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCEED21566BFE00A055AC /* Controllers */,
+				CE0FCEEC21566BF900A055AC /* Views */,
+				CE0FCEEB21566BF400A055AC /* Models */,
+			);
+			path = CMUNearMe;
+			sourceTree = "<group>";
+		};
+		CE0FCEEB21566BF400A055AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE0FCEEC21566BF900A055AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCEF821566F2F00A055AC /* PosterCell.h */,
+				CE0FCEF921566F2F00A055AC /* PosterCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0FCEED21566BFE00A055AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCEEE21566C7D00A055AC /* NearMeViewController.h */,
+				CE0FCEEF21566C7D00A055AC /* NearMeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE0FCEF121566C8800A055AC /* CMUMyPlaylists */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCEF421566C9F00A055AC /* Controllers */,
+				CE0FCEF321566C9B00A055AC /* Views */,
+				CE0FCEF221566C9400A055AC /* Models */,
+			);
+			path = CMUMyPlaylists;
+			sourceTree = "<group>";
+		};
+		CE0FCEF221566C9400A055AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE0FCEF321566C9B00A055AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0FCEF421566C9F00A055AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE0FCEF521566CB100A055AC /* MyPlaylistsViewController.h */,
+				CE0FCEF621566CB100A055AC /* MyPlaylistsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0FCEDC2155EA5A00A055AC /* Build configuration list for PBXNativeTarget "concertApp" */;
 			buildPhases = (
+				3FDFD6D3C6DAD4240E8FC947 /* [CP] Check Pods Manifest.lock */,
 				CE0FCEAC2155EA5A00A055AC /* Sources */,
 				CE0FCEAD2155EA5A00A055AC /* Frameworks */,
 				CE0FCEAE2155EA5A00A055AC /* Resources */,
@@ -177,6 +297,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0FCEDF2155EA5A00A055AC /* Build configuration list for PBXNativeTarget "concertAppTests" */;
 			buildPhases = (
+				D73D983EC76286B3A4728F1C /* [CP] Check Pods Manifest.lock */,
 				CE0FCEC42155EA5A00A055AC /* Sources */,
 				CE0FCEC52155EA5A00A055AC /* Frameworks */,
 				CE0FCEC62155EA5A00A055AC /* Resources */,
@@ -195,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE0FCEE22155EA5A00A055AC /* Build configuration list for PBXNativeTarget "concertAppUITests" */;
 			buildPhases = (
+				1EFE37F99DFDC840CCC7AB69 /* [CP] Check Pods Manifest.lock */,
 				CE0FCECF2155EA5A00A055AC /* Sources */,
 				CE0FCED02155EA5A00A055AC /* Frameworks */,
 				CE0FCED12155EA5A00A055AC /* Resources */,
@@ -278,15 +400,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EFE37F99DFDC840CCC7AB69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-concertAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDFD6D3C6DAD4240E8FC947 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-concertApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D73D983EC76286B3A4728F1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-concertAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE0FCEAC2155EA5A00A055AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0FCEF721566CB100A055AC /* MyPlaylistsViewController.m in Sources */,
+				CE0FCEFA21566F2F00A055AC /* PosterCell.m in Sources */,
 				CE0FCEB82155EA5A00A055AC /* ViewController.m in Sources */,
 				CE0FCEE92155F28800A055AC /* UploadViewController.m in Sources */,
 				CE0FCEC32155EA5A00A055AC /* main.m in Sources */,
 				CE0FCEB52155EA5A00A055AC /* AppDelegate.m in Sources */,
+				CE0FCEF021566C7D00A055AC /* NearMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +649,7 @@
 		};
 		CE0FCEDD2155EA5A00A055AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC11F4E63CF507808EE219E7 /* Pods-concertApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +667,7 @@
 		};
 		CE0FCEDE2155EA5A00A055AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40769EF0FD0AA9C3985B4A82 /* Pods-concertApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +685,7 @@
 		};
 		CE0FCEE02155EA5A00A055AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B087066A8B96A1875A5DC8 /* Pods-concertAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +705,7 @@
 		};
 		CE0FCEE12155EA5A00A055AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAB23891AA5DFA8DCF913162 /* Pods-concertAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +725,7 @@
 		};
 		CE0FCEE32155EA5A00A055AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15EBB2BE5E2AC67AB404CC7B /* Pods-concertAppUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
@@ -545,6 +744,7 @@
 		};
 		CE0FCEE42155EA5A00A055AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A65629526EB7CA895BEF93 /* Pods-concertAppUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
