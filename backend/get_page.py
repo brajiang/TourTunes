@@ -85,32 +85,43 @@ def possible_setlist(tag):
         return False
     return True
 
+def is_page_link(tag):
+    if tag.name != 'a':
+        return False
+    if tag == None:
+        return False
+    if tag.get('href') == None:
+        return False
+    link = tag['href']
+    if link.find('https://www.setlist.fm/setlists') == -1:
+        return False
+    return True
+
 def scrape_html(tour_name):
     # start with results of setlist.fm search
     query = tour_name.replace(' ', '+')
     start_url = 'https://www.setlist.fm/search?query={}'.format(query)
     # start with results of google search of setlist.fm, go to first link...?
-
+    g_search_url = 'https://www.google.com/search?q={}+%3Asetlist.fm'.format(query)
     # read in entire query page html file
-    webcontent = BeautifulSoup(requests.get(start_url).content, 'html.parser')
-
-    # search web content
-    # print(webcontent)
-    setlists = webcontent.find_all(possible_setlist)
-    for tag in setlists:
-        # get link from each
-        link = tag['href']
-        url = 'https://www.setlist.fm/{}'.format(link)
-        #print(url)
-        content = requests.get(url).content
-        songs = extract_songs(content)
-        #print(songs)
-        if songs != None and len(songs) > 5:
-            return songs
+    # webcontent = BeautifulSoup(requests.get(start_url).content, 'html.parser')
+    results_page = BeautifulSoup(requests.get(g_search_url).content, 'html.parser')
+    search_results = results.find_all(is_page_link)
+    for res in search_results:
+        link = res['href']
+        webcontent = BeautifulSoup(requests.get(link))
+        setlists = webcontent.find_all(possible_setlist)
+        for tag in setlists:
+            # get link from each
+            link = tag['href']
+            url = 'https://www.setlist.fm/{}'.format(link)
+            #print(url)
+            content = requests.get(url).content
+            songs = extract_songs(content)
+            #print(songs)
+            if songs != None and len(songs) > 5:
+                return songs
     return None
 
-<<<<<<< HEAD
-# scrape_html('katy perry')
-=======
+scrape_html('taylor swift')
 #print(scrape_html('katy perry'))
->>>>>>> 1c9433a8ad015f0c875bffaf71af5837234da795
