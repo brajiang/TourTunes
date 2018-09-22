@@ -74,10 +74,8 @@ def prompt_for_user_token(username, scope=None, client_id = None,
             response = raw_input("Enter the URL you were redirected to: ")
         except NameError:
             response = input("Enter the URL you were redirected to: ")
-
         print()
         print()
-
         code = sp_oauth.parse_response_code(response)
         token_info = sp_oauth.get_access_token(code.strip())
     # Auth'ed API request
@@ -85,6 +83,16 @@ def prompt_for_user_token(username, scope=None, client_id = None,
         return token_info['access_token']
     else:
         return None
+
+def getSongID(sp, song, artist=None):
+    tracks = sp.search(q='track: ' + song, type='track')
+    if len(tracks['tracks']['items']) == 0: return None
+    for track in tracks['tracks']['items']:
+        sid = track['id']
+        for artistInfo in sp.track(sid)['artists']:
+            if artistInfo['name'] == artist:
+                return sid
+    return tracks['tracks']['items'][0]['id']
 
 def getPlaylistURL(tourName, songsList):
     #songsList is an array of pairs (song,artist)
@@ -110,15 +118,17 @@ def getPlaylistURL(tourName, songsList):
             pid = pl['id']
             # url is just playlist/$pid
     if pid == "":
-        print("couldn't find playlist ID after creatings")
+        print("couldn't find playlist ID after creating playlists")
         return None
     trackList = []
     for (song, artist) in songsList:
-        tracks = sp.search(q='track: ' + song, type='track')
-        sid=tracks['tracks']['items'][0]['id']
-        trackList.append(sid)
-    sp.user_playlist_add_tracks(uid, pid, trackList)
+        sid = getSongID(sp, song, artist)
+        if sid != None: trackList.append(sid)
+    if trackList != []:
+        sp.user_playlist_add_tracks(uid, pid, trackList)
+    else:
+        print("No songs on the playlist were found")
 
-songList = get_page.scrape_html("katy perry")
-print("songlist is: ", songList)
-getPlaylistURL("testcrap", songList)
+#songList = get_page.scrape_html("katy perry")
+#print("songlist is: ", songList)
+getPlaylistURL("testcrap", [("Dark Horse", "Big booty man")])

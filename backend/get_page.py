@@ -109,4 +109,8 @@ def scrape_html(tour_name):
             return songs
     return None
 
+<<<<<<< HEAD
 # scrape_html('katy perry')
+=======
+#print(scrape_html('katy perry'))
+>>>>>>> 1c9433a8ad015f0c875bffaf71af5837234da795
