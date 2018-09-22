@@ -5,7 +5,7 @@
 //  Created by Connor Clancy on 9/21/18.
 //  Copyright © 2018 Connor Clancy. All rights reserved.
 //
-
+@import Firebase;
 #import "UploadViewController.h"
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -24,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Create New Playlist";
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
 
 - (IBAction)uploadButtonPressed:(id)sender {
@@ -40,11 +45,34 @@
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
     //TODO: Send Edited image to Rohit Here!
-    NSString *baseURL = @"http://192.168.0.13:56001";
-    UNIHTTPJsonResponse *response = [[UNIRest post:^(UNISimpleRequest *simpleRequest) {
-        [simpleRequest setUrl:baseURL];
-    }] asJsonAsync:<#^(UNIHTTPJsonResponse *jsonResponse, NSError *error)response#>]
+    NSData *imageData = UIImageJPEGRepresentation(editedImage, 1.0);
+    // FIREBASE STORAGE
+    FIRStorage *storage = [FIRStorage storage];
+    FIRStorageReference *storageRef = [storage reference];
     
+    FIRStorageReference *posterRef = [storageRef child:@"images/somePoster.jpg"];
+    
+    FIRStorageUploadTask *uploadTask = [posterRef putData:imageData
+                                                 metadata:nil
+                                               completion:^(FIRStorageMetadata *metadata,
+                                                            NSError *error) {
+                                                   if (error != nil) {
+                                                       // Uh-oh, an error occurred!
+                                                   } else {
+                                                       // Metadata contains file metadata such as size, content-type, and download URL.
+                                                       int size = metadata.size;
+                                                       // You can also access to download URL after upload.
+                                                       [posterRef downloadURLWithCompletion:^(NSURL * _Nullable URL, NSError * _Nullable error) {
+                                                           if (error != nil) {
+                                                               // Uh-oh, an error occurred!
+                                                           } else {
+                                                               NSURL *downloadURL = URL;
+                                                               // Do completion here
+                                                               //
+                                                           }
+                                                       }];
+                                                   }
+                                               }];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     

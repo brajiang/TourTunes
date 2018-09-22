@@ -8,6 +8,9 @@ target 'concertApp' do
   # Pods for concertApp
   pod 'AFNetworking'
   pod 'Unirest'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
 
   target 'concertAppTests' do
     inherit! :search_paths

@@ -9,8 +9,10 @@
 #import "MyPlaylistsViewController.h"
 #import "SpotifyDataManager.h"
 #import "SpotifySong.h"
+#import "SongCell.h"
 
-@interface MyPlaylistsViewController ()
+@interface MyPlaylistsViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property NSMutableArray<SpotifySong *> *songs;
 
@@ -20,14 +22,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"My Playlists";
+    self.title = @"Latest Playlist";
     // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     [SpotifyDataManager getPlaylistWithId:@"5TotXALQTIJ5nUQ5YlAFCr" Completion:^(NSDictionary * _Nonnull response) {
         NSArray *temporary = [[NSArray alloc] init];
         temporary = response[@"tracks"][@"items"];
         self.songs = [[SpotifySong songsWithArray:temporary] mutableCopy];
+        [self.tableView reloadData];
         NSLog(@"%@", self.songs);
     }];
+}
+
+
+/************************
+ 
+ TABLE VIEW FUNCTIONS
+ 
+ *************************/
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SongCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SongCell"];
+    cell.song = self.songs[indexPath.row];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.songs.count;
 }
 
 /*

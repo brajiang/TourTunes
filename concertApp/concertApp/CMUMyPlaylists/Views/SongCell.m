@@ -7,6 +7,7 @@
 //
 
 #import "SongCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation SongCell
 
@@ -21,4 +22,10 @@
     // Configure the view for the selected state
 }
 
+- (void)setSong:(SpotifySong *)song {
+    _song = song;
+    self.songLabel.text = song.songTitle;
+    self.artistLabel.text = song.songArtist;
+    [self.albumImageView setImageWithURL:[NSURL URLWithString:song.songAlbumArt]];
+}
 @end

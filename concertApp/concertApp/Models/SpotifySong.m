@@ -12,16 +12,12 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     
-    self.songTitle = dictionary[@"name"];
-    self.songUri = dictionary[@"uri"];
-    NSString * artists = dictionary[@"artists"][0][@"name"];
-    for (int i = 1; i< [dictionary[@"artists"] count]; i++){
-        artists = [artists stringByAppendingString:@" and "];
-        artists = [artists stringByAppendingString:dictionary[@"artists"][i][@"name"]];
-    }
+    self.songTitle = dictionary[@"track"][@"name"];
+    self.songUri = dictionary[@"track"][@"uri"];
+    NSString * artists = dictionary[@"track"][@"artists"][0][@"name"];
     self.songArtist = artists;
-    self.songAlbum = dictionary[@"album"][@"name"];
-    self.songAlbumArt = dictionary[@"album"][@"images"][0][@"url"];
+    self.songAlbum = dictionary[@"track"][@"album"][@"name"];
+    self.songAlbumArt = dictionary[@"track"][@"album"][@"images"][0][@"url"];
     
     return self;
 }

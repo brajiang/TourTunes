@@ -5,7 +5,7 @@
 //  Created by Connor Clancy on 9/21/18.
 //  Copyright © 2018 Connor Clancy. All rights reserved.
 //
-
+@import Firebase;
 #import "AppDelegate.h"
 #import "SpotifySingleton.h"
 #import <UIKit/UIKit.h>
@@ -40,6 +40,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self startAuthenticationFlow];
     });
+    
+    [FIRApp configure];
     
     return YES;
 }
