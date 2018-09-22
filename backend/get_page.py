@@ -72,6 +72,20 @@ def extract_songs(page):
             # print(content)
     return None
 
+
+def extract_tourname(page):
+    doc = BeautifulSoup(page, 'html.parser')
+    spans = doc.find_all('span')
+    # search spans for Tour:
+    for idx in range(len(spans)):
+        if spans[idx].string == 'Tour:':
+            tour_tag = spans[idx+2]
+            # print(tour_tag)
+            return tour_tag.string
+    return None
+
+
+
 def possible_setlist(tag):
     if tag.name != 'a':
         return False
@@ -130,10 +144,12 @@ def scrape_html(tour_name):
             # print('playlist url:' + url)
             content = requests.get(url).content
             songs = extract_songs(content)
+            tour_name = extract_tourname(content)
+            if tour_name == None:
+                tour_name = songs[0][1]
             # print(songs)
             if songs != None and len(songs) > 5:
-                return songs
+                return (tour_name,songs)
     return None
 
-#print(scrape_html('taylor swift'))
 # print(scrape_html('katy perry'))
