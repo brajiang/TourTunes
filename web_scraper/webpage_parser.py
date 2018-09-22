@@ -1,11 +1,16 @@
+'''
+Parses content of setlist.fm page to get song, artist pairs.
+'''
 from bs4 import BeautifulSoup
 
 def parse_content(content):
     # outputs list all song, artist pairs
     songs = []
-    index = content.find('YoutubeSearch.setPlaylist')
+    index = content.find('YouTubeSearch.setPlaylist')
+    if index == -1:
+        return songs
     # parse this part of the string
-    index += len('YoutubeSearch.setPlaylist')
+    index += len('YouTubeSearch.setPlaylist')
 
     reach_end = False
     while not reach_end:
@@ -20,9 +25,12 @@ def parse_content(content):
                 if content[index] == '\"':
                     quote_count += 1
                 index += 1
+
             # read string
-            while content[index] != '\"':
-                song += content[index]
+            while content[index] != '\"' or \
+                    (content[index] == '\"' and content[index-1] == '\\'):
+                if content[index] != '\\':
+                    song += content[index]
                 index += 1
 
             quote_count = 0
@@ -43,7 +51,6 @@ def parse_content(content):
             index += 1
     return songs
 
-
 def extract_songs(page):
     doc = BeautifulSoup(page, 'html.parser')
     scripts = doc.find_all('script')
@@ -57,8 +64,4 @@ def extract_songs(page):
             return parse_content(content)
             # read until ']'
             # print(content)
-
-with open('maroon5_webpage.html', 'r') as ifile:
-    page = ifile.read()
-
-print(extract_songs(page))
+    return None
