@@ -4,6 +4,8 @@ import spotipy
 import spotipy.util as util
 import os
 from spotipy import oauth2
+import json
+
 def prompt_for_user_token(username, scope=None, client_id = None,
         client_secret = None, redirect_uri = None, cache_path = None):
     ''' prompts the user to login if necessary and returns
@@ -98,9 +100,8 @@ def getPlaylistURL(tourName, songsList):
         print("Can't get token!")
         return None
     sp = spotipy.Spotify(auth=token)
-    print("user info: ", sp.current_user())
     uid = sp.current_user()['id']
-    sp.user_playlist_create(uid, plName, True)
+    #sp.user_playlist_create(uid, plName, True)
     playlistList = sp.user_playlists(uid)
     pid = ""
     for pl in playlistList['items']:
@@ -110,5 +111,11 @@ def getPlaylistURL(tourName, songsList):
     if pid == "":
         print("couldn't find playlist ID after creatings")
         return None
+    trackList = []
+    for (song, artist) in songsList:
+        tracks = sp.search(q='track: ' + song, type='track')
+        sid=tracks['tracks']['items'][0]['id']
+        trackList.append(sid)
+    sp.user_playlist_add_tracks(uid, pid, trackList)
 
-    print("done")
+getPlaylistURL("testcrap", [("Bad Romance", "Lady Gaga")])
