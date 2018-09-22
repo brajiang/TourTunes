@@ -152,5 +152,4 @@ def scrape_html(tour_name):
                 return (tour_name,songs)
     return None
 
-print(scrape_html('12s fd taylor swift'))
 # print(scrape_html('katy perry'))

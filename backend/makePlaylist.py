@@ -7,6 +7,7 @@ from spotipy import oauth2
 import json
 import get_page
 
+PID = '5TotXALQTIJ5nUQ5YlAFCr'
 def prompt_for_user_token(username, scope=None, client_id = None,
         client_secret = None, redirect_uri = None, cache_path = None):
     ''' prompts the user to login if necessary and returns
@@ -111,24 +112,23 @@ def getPlaylistURL(tourName, songsList):
     sp = spotipy.Spotify(auth=token)
     uid = sp.current_user()['id']
     #sp.user_playlist_create(uid, plName, True)
-    playlistList = sp.user_playlists(uid)
-    pid = ""
-    for pl in playlistList['items']:
-        if pl['name'] == plName:
-            pid = pl['id']
+    #playlistList = sp.user_playlists(uid)
+    #pid = ""
+    #for pl in playlistList['items']:
+    #    if pl['name'] == plName:
+    #       pid = pl['id']
             # url is just playlist/$pid
-    if pid == "":
-        print("couldn't find playlist ID after creating playlists")
-        return None
+    #if pid == "":
+    #    print("couldn't find playlist ID after creating playlists")
+    #   return None
+    pid = PID
     trackList = []
     for (song, artist) in songsList:
         sid = getSongID(sp, song, artist)
         if sid != None: trackList.append(sid)
     if trackList != []:
-        sp.user_playlist_add_tracks(uid, pid, trackList)
+        sp.user_playlist_replace_tracks(uid, pid, trackList)
+        sp.user_playlist_change_details(uid,pid, tourName + " playlist")
     else:
         print("No songs on the playlist were found")
 
-#songList = get_page.scrape_html("katy perry")
-#print("songlist is: ", songList)
-getPlaylistURL("testcrap", [("Dark Horse", "Big booty man")])
